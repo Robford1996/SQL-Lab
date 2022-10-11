@@ -10,13 +10,14 @@ SELECT * FROM country WHERE region LIKE '%Southern Europe' ORDER BY population A
 -- spoken in this country, so we can call in a translator to work with you.
 
 -- Write SQL query here
-
+SELECT * FROM countrylanguage WHERE countrycode LIKE '%VAT';
 
 -- Clue #3: We have new news on the classes Carmen attended – our gumshoes tell us she's moved on
 -- to a different country, a country where people speak only the language she was learning. Find out which
 -- nearby country speaks nothing but that language.
 
 -- Write SQL query here
+SELECT * FROM countrylanguage WHERE language LIKE '%Italian' ORDER BY percentage DESC;
 
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time.
@@ -25,6 +26,7 @@ SELECT * FROM country WHERE region LIKE '%Southern Europe' ORDER BY population A
 -- be flying to.
 
 -- Write SQL query here
+SELECT * FROM city WHERE countrycode LIKE '%SMR';
 
 
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different
@@ -32,6 +34,7 @@ SELECT * FROM country WHERE region LIKE '%Southern Europe' ORDER BY population A
 -- headed to, but doesn't end the same. Find out the city, and do another search for what country it's in. Hurry!
 
 -- Write SQL query here
+SELECT * FROM city WHERE name LIKE '%Serravalle';
 
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
@@ -39,6 +42,8 @@ SELECT * FROM country WHERE region LIKE '%Southern Europe' ORDER BY population A
 -- follow right behind you!
 
 -- Write SQL query here
+SELECT * FROM country WHERE code LIKE '%BRA';
+SELECT * FROM city WHERE id = '211';
 
 
 -- Clue #7: She knows we're on to her – her taxi dropped her off at the international airport, and she beat us to
@@ -54,6 +59,6 @@ SELECT * FROM country WHERE region LIKE '%Southern Europe' ORDER BY population A
 --               So I'm off to add one to the population I find
 --               In a city of ninety-one thousand and now, eighty five.
 
-
+SELECT * FROM city WHERE population = '91084';
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
